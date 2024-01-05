@@ -4,6 +4,7 @@ import TodoListHeader from "./TodoListHeader";
 import Form from "./Form";
 import Footer from "./Footer";
 import { Routes, Route } from "react-router-dom";
+import { TodoProvider } from "./context";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
 
 const Home = () => {
   return (
+    <TodoProvider>
     <div className="App">
       <div className="container">
         <TodoListHeader />
@@ -25,5 +27,6 @@ const Home = () => {
       </div>
       <Footer />
     </div>
+    </TodoProvider>
   );
 };
